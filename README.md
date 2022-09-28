@@ -175,7 +175,8 @@ plt.scatter(x,y)
 plt.plot(x,prediction)
 
 ```
-![image](https://user-images.githubusercontent.com/114469025/192696901-9edafb34-51c4-4849-9ece-0439f4991134.png)
+![image](https://user-images.githubusercontent.com/114469025/192697357-e31833fb-f366-4821-912e-a7af0fb6ffe8.png)
+
 
 
 ## Задание 3
