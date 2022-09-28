@@ -22,9 +22,12 @@
 ## Задание 1
 ### Написание программ Hello World на Python и Unity
 - Для Python с демонстрацией сохранения документа goojle.collab
+
 ![image](https://user-images.githubusercontent.com/114469025/192469514-e13691c9-db4d-4001-b9de-499163f7383d.png)
 ![image](https://user-images.githubusercontent.com/114469025/192469552-48bfe473-9034-4470-85d1-9d2635dff3f5.png)
+
 - Для Unity вывод в консоль
+
 ![image](https://user-images.githubusercontent.com/114469025/192699661-c30533d9-f49b-492d-a625-df5436d557ad.png)
 ![image](https://user-images.githubusercontent.com/114469025/192699726-e2320c93-0bab-4730-b607-d7d9797b7bb1.png)
 
