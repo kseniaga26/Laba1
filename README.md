@@ -145,6 +145,7 @@ plt.plot(x,prediction)
 ![image](https://user-images.githubusercontent.com/114469025/192696606-aac68fe9-632c-4168-93a7-9f9bea53b78b.png)
 
 - Шаг 4
+```py
 a,b = iterate(a,b,x,y,4)
 prediction=model(a,b,x)
 loss = loss_function(a, b, x, y)
@@ -156,6 +157,7 @@ plt.plot(x,prediction)
 ![image](https://user-images.githubusercontent.com/114469025/192696752-b9bda522-5891-4356-a084-fc3d4a2e7b3e.png)
 
 - Шаг 5
+```py
 a,b = iterate(a,b,x,y,5)
 prediction=model(a,b,x)
 loss = loss_function(a, b, x, y)
@@ -167,6 +169,7 @@ plt.plot(x,prediction)
 ![image](https://user-images.githubusercontent.com/114469025/192696827-1b9e380d-0556-477f-baf5-4bda346bb448.png)
 
 - Шаг 6
+```py
 a,b = iterate(a,b,x,y,10000)
 prediction=model(a,b,x)
 loss = loss_function(a, b, x, y)
