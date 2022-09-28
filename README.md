@@ -14,15 +14,6 @@
 
 знак "*" - задание выполнено; знак "#" - задание не выполнено;
 
-Работу проверили:
-- к.т.н., доцент Денисов Д.В.
-- к.э.н., доцент Панов М.А.
-- ст. преп., Фадеев В.О.
-
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
-
 Структура отчета
 
 - Данные о работе: название работы, фио, группа, выполненные задания.
@@ -50,11 +41,10 @@
 ## Задание 2
 ### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
 Ход работы:
-- Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
+1. Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
 
 ```py
 
-In [ ]:
 #Import the required modules, numpy for calculation, and Matplotlib for drawing
 import numpy as np
 import matplotlib.pyplot as plt
@@ -71,10 +61,9 @@ y = np.array(y)
 plt.scatter(x,y)
 
 ```
+![image](https://user-images.githubusercontent.com/114469025/192696093-76b22c47-3a92-4f6e-a3bf-a4615fe02063.png)
 
-![image](https://user-images.githubusercontent.com/114469025/192691392-4d4e9bf2-1fd8-4bb1-b397-90d1958bb8f8.png)
-
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
+2. Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
 
 ```py
 
@@ -105,11 +94,88 @@ def iterate(a, b, x, y, times):
 
 
 ```
-![image](https://user-images.githubusercontent.com/114469025/192691694-1d201ffd-165a-49e6-a6c7-60f1f2d7e447.png)
+![image](https://user-images.githubusercontent.com/114469025/192696163-6746c586-e1a6-4127-9f12-5692ba04917a.png)
 
-![image](https://user-images.githubusercontent.com/114469025/192691635-1382d1a0-1b80-40ee-bbfe-6a404725e849.png)
+3. Начать итерацию.
 
-- Начать итерацию.
+- Шаг 1
+```py
+
+#Initialize parameters and display
+a = np.random.rand(1)
+print(a)
+b = np.random.rand(1)
+print(b)
+Lr = 0.000001
+
+#For the first iteration, the parameter values, losses, and visualization after the iteration are displayed
+a,b = iterate(a,b,x,y,1)
+prediction=model(a,b,x)
+loss = loss_function(a, b, x, y)
+print(a,b,loss)
+plt.scatter(x,y)
+plt.plot(x,prediction)
+
+```
+![image](https://user-images.githubusercontent.com/114469025/192696222-df08493b-f4da-46b8-94e8-da52f78d63c7.png)
+
+- Шаг 2
+```py
+
+a,b = iterate(a,b,x,y,2)
+prediction=model(a,b,x)
+loss = loss_function(a, b, x, y)
+print(a,b,loss)
+plt.scatter(x,y)
+plt.plot(x,prediction)
+
+```
+![image](https://user-images.githubusercontent.com/114469025/192696310-6f81c4bc-a9ba-40cd-afb6-fcf02e105419.png)
+
+- Шаг 3
+```py
+a,b = iterate(a,b,x,y,3)
+prediction=model(a,b,x)
+loss = loss_function(a, b, x, y)
+print(a,b,loss)
+plt.scatter(x,y)
+plt.plot(x,prediction)
+
+```
+![image](https://user-images.githubusercontent.com/114469025/192696606-aac68fe9-632c-4168-93a7-9f9bea53b78b.png)
+
+- Шаг 4
+a,b = iterate(a,b,x,y,4)
+prediction=model(a,b,x)
+loss = loss_function(a, b, x, y)
+print(a,b,loss)
+plt.scatter(x,y)
+plt.plot(x,prediction)
+
+```
+![image](https://user-images.githubusercontent.com/114469025/192696752-b9bda522-5891-4356-a084-fc3d4a2e7b3e.png)
+
+- Шаг 5
+a,b = iterate(a,b,x,y,5)
+prediction=model(a,b,x)
+loss = loss_function(a, b, x, y)
+print(a,b,loss)
+plt.scatter(x,y)
+plt.plot(x,prediction)
+
+```
+![image](https://user-images.githubusercontent.com/114469025/192696827-1b9e380d-0556-477f-baf5-4bda346bb448.png)
+
+- Шаг 6
+a,b = iterate(a,b,x,y,10000)
+prediction=model(a,b,x)
+loss = loss_function(a, b, x, y)
+print(a,b,loss)
+plt.scatter(x,y)
+plt.plot(x,prediction)
+
+```
+![image](https://user-images.githubusercontent.com/114469025/192696901-9edafb34-51c4-4849-9ece-0439f4991134.png)
 
 
 ## Задание 3
