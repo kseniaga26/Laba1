@@ -72,6 +72,8 @@ plt.scatter(x,y)
 
 ```
 
+![image](https://user-images.githubusercontent.com/114469025/192691392-4d4e9bf2-1fd8-4bb1-b397-90d1958bb8f8.png)
+
 - Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
 
 ```py
@@ -103,6 +105,9 @@ def iterate(a, b, x, y, times):
 
 
 ```
+![image](https://user-images.githubusercontent.com/114469025/192691694-1d201ffd-165a-49e6-a6c7-60f1f2d7e447.png)
+
+![image](https://user-images.githubusercontent.com/114469025/192691635-1382d1a0-1b80-40ee-bbfe-6a404725e849.png)
 
 - Начать итерацию.
 
